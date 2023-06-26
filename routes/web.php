@@ -30,9 +30,11 @@ Route::middleware([
 route::get('/',[HomeController::class, 'index']);
 route::get('/Homedashboard',[HomeController::class, 'Homedashboard'])->middleware('auth','verified');
 route::get('/Add_Student',[StudentController::class, 'Add_Student']);
-route::post('/Save_Student',[StudentController::class, 'Save_Student']);
-route::get('/View_students',[StudentController::class, 'View_students']);
+route::post('Save_Student',[StudentController::class, 'Save_Student'])->name('Save_Student');
+route::get('/View_students',[StudentController::class, 'View_students'])->name('View_students');
+route::get('edit_student/{id}',[StudentController::class,'edit_student'])->name('edit_student');
+route::post('Update_Student',[StudentController::class,'Update_Student'])->name('Update_Student');
 
-route::get('/student_v',[StudentController::class, 'student_v']);
+
 
 route::get('/logout',[HomeController::class, 'logout']);

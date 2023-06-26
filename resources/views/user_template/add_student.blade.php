@@ -5,7 +5,7 @@
  <!-- partial -->
  <div class="main-panel">
         <div class="content-wrapper">
-        <form action="{{url('Save_Student')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('Save_Student')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
         <label for="P_title">Last Name</label>
@@ -26,7 +26,7 @@
                           <option value="" selected="">Select Gender</option>
                           
                           <option value="Male">Male</option>
-                          <option value="Male">Female</option>
+                          <option value="Female">Female</option>
                          
                         </select>
               </div>
